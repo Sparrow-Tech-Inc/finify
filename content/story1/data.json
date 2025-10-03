@@ -1,0 +1,22 @@
+{
+  "id": "story1",
+  "title": {
+    "en": "The Clever Fox",
+    "hi": "चतुर लोमड़ी",
+    "bn": "চতুর শিয়াল"
+  },
+  "content": [
+    {
+      "lang": "en",
+      "text": "Once upon a time in a dense forest, there lived a clever fox..."
+    },
+    {
+      "lang": "hi",
+      "text": "एक बार की बात है, घने जंगल में एक चतुर लोमड़ी रहती थी..."
+    },
+    {
+      "lang": "bn",
+      "text": "এক সময়ের কথা, ঘন জঙ্গলে একটি চতুর শিয়াল বাস করত..."
+    }
+  ]
+}
