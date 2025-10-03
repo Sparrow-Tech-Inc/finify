@@ -4,35 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Story</title>
-  <link rel="stylesheet" href="../../assets/style.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/style.css" rel="stylesheet">
 </head>
 <body>
-  <div class="story-container">
-    <h1 id="story-title"></h1>
-    <p id="story-content"></p>
+<div class="container py-4">
+  <!-- Skeleton Loader -->
+  <div id="imgSkeleton" class="skeleton"></div>
+  <!-- Article Image -->
+  <img id="articleImg" alt="Article Image" class="article-img" draggable="false">
 
-    <!-- Language Switcher -->
-    <div class="lang-switcher">
-      <button onclick="changeLanguage('en')">English</button>
-      <button onclick="changeLanguage('hi')">हिंदी</button>
-      <button onclick="changeLanguage('bn')">বাংলা</button>
-    </div>
-
-    <!-- Save Button -->
-    <button id="save-btn">Save Story</button>
+  <!-- Progress Bar -->
+  <div class="progress mt-3" style="height: 10px;">
+    <div id="progressBar" class="progress-bar" role="progressbar" style="width: 0%;"></div>
   </div>
 
-  <script src="../../assets/script.js"></script>
-  <script>
-    const storyFolder = window.location.pathname.split('/')[2]; // story1, story2...
-    loadStory(storyFolder, 'en'); // default English
+  <!-- Article Content -->
+  <div class="article-box mt-3"></div>
+</div>
 
-    document.getElementById('save-btn').addEventListener('click', function() {
-      saveStory(storyFolder);
-      alert('Story saved!');
-    });
-  </script>
+<!-- Congratulations Modal -->
+<div class="modal fade" id="congratsModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center p-4">
+      <img src="https://cdn-icons-png.flaticon.com/512/4319/4319104.png" alt="Congrats" class="congrats-img">
+      <h3 class="text-success"><i class="bi bi-trophy-fill"></i> Congratulations!</h3>
+      <p class="mt-2">🎉 You have completed reading the full article 🎉</p>
+      <div class="d-flex justify-content-center gap-3 mt-3">
+        <a href="../../index.html" class="btn secondary"> Back to Home </a>
+        <button type="button" class="btn success" data-bs-dismiss="modal"> Continue </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/script.js"></script>
 </body>
 </html>
-
-
