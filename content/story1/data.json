@@ -1,22 +1,22 @@
 {
-  "id": "story1",
-  "title": {
-    "en": "The Clever Fox",
-    "hi": "चतुर लोमड़ी",
-    "bn": "চতুর শিয়াল"
-  },
-  "content": [
+  "title": "About Taj Mahal",
+  "image": "../../assets/img/tajmahal.jpg",
+  "parts": [
     {
-      "lang": "en",
-      "text": "Once upon a time in a dense forest, there lived a clever fox..."
+      "heading": "About Taj Mahal",
+      "text": "The Taj Mahal is one of the most beautiful monuments in the world, located in Agra, India."
     },
     {
-      "lang": "hi",
-      "text": "एक बार की बात है, घने जंगल में एक चतुर लोमड़ी रहती थी..."
+      "heading": "Architecture",
+      "text": "The Taj Mahal is made of white marble and is considered one of the finest examples of Mughal architecture."
     },
     {
-      "lang": "bn",
-      "text": "এক সময়ের কথা, ঘন জঙ্গলে একটি চতুর শিয়াল বাস করত..."
+      "heading": "Heritage",
+      "text": "It is recognized as a UNESCO World Heritage Site and attracts millions of tourists every year."
+    },
+    {
+      "heading": "The End",
+      "text": ""
     }
   ]
 }
