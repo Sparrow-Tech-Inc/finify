@@ -1,38 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+:root {
+  --primary-color: #ff3b6e;
+  --background: #fff;
+  --text-color: #000;
+  --box-color: #fff;
+  --success: #ff3b6e;
+  --secondary: #6c757d;
+  --overlay: #ffffff;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  max-width: 700px;
-  margin: auto;
-  padding: 20px;
-  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+  background: var(--background);
 }
 
-.story-container {
-  border: 1px solid #ccc;
-  padding: 20px;
+.progress-bar {
+  background-color: var(--primary-color);
+}
+
+.skeleton {
+  width: 100%;
+  max-height: 160px;
+  height: 160px;
   border-radius: 10px;
+  background: linear-gradient(135deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
 }
 
-.lang-switcher {
-  margin: 15px 0;
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
-.lang-switcher button {
-  margin-right: 10px;
-  padding: 5px 12px;
-  border: none;
-  background: #007bff;
+.article-img {
+  width: 100%;
+  max-height: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: none;
+}
+
+.article-box {
+  background: var(--box-color);
+  color: var(--text-color);
+  padding: 20px 10px;
+  border-radius: 12px;
+  margin-top: 20px;
+  height: calc(100% - 310px);
+  position: relative;
+}
+
+.article-part {
+  height: calc(100% - 60px);
+  overflow: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  width: calc(100% - 40px);
+}
+
+.article-part.active {
+  opacity: 1;
+}
+
+.nav-btns {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-custom-prev {
+  background-color: var(--secondary);
   color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.lang-switcher button:hover {
-  background: #0056b3;
-}
-
-.saved-story {
-  border: 1px solid #ddd;
-  margin: 10px 0;
-  padding: 15px;
   border-radius: 8px;
+}
+
+.btn-custom-next {
+  background-color: var(--success);
+  color: white;
+  border-radius: 8px;
+}
+
+.btn-custom-next:hover {
+  background-color: var(--success);
+  color: white;
+}
+
+.btn-custom-prev:disabled,
+.btn-custom-next:disabled {
+  opacity: 0.4;
+}
+
+.congrats-img {
+  width: 110px;
+  margin: 10px auto;
+  display: block;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color);
+  padding: 4px;
+}
+
+.success {
+  background-color: var(--success);
+  color: #fff;
+}
+
+.secondary {
+  background-color: var(--secondary);
+  color: #fff;
+}
+
+.modal-content {
+  background-color: var(--overlay);
 }
