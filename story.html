@@ -3,25 +3,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Story Page</title>
+  <title>Story</title>
   <link rel="stylesheet" href="../../assets/style.css">
 </head>
 <body>
   <div class="story-container">
     <h1 id="story-title"></h1>
     <p id="story-content"></p>
+
+    <!-- Language Switcher -->
+    <div class="lang-switcher">
+      <button onclick="changeLanguage('en')">English</button>
+      <button onclick="changeLanguage('hi')">हिंदी</button>
+      <button onclick="changeLanguage('bn')">বাংলা</button>
+    </div>
+
+    <!-- Save Button -->
     <button id="save-btn">Save Story</button>
   </div>
 
   <script src="../../assets/script.js"></script>
   <script>
     const storyFolder = window.location.pathname.split('/')[2]; // story1, story2...
-    loadStory(storyFolder); // function from script.js
+    loadStory(storyFolder, 'en'); // default English
 
     document.getElementById('save-btn').addEventListener('click', function() {
-      saveStory(storyFolder); // function from script.js
+      saveStory(storyFolder);
       alert('Story saved!');
     });
   </script>
 </body>
 </html>
+
+
