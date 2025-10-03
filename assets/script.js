@@ -3,7 +3,7 @@ async function loadStoryData() {
     // Get story folder path dynamically
     const currentPath = window.location.pathname;
     const storyFolder = currentPath.substring(0, currentPath.lastIndexOf("/"));
-    const jsonPath = `${storyFolder}/data.json`;
+    const jsonPath = `../content/${storyFolder}/data.json`;
 
     const response = await fetch(jsonPath);
     if (!response.ok) throw new Error("Failed to load story data");
