@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Story Page</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+</head>
+<body>
+  <div class="story-container">
+    <h1 id="story-title"></h1>
+    <p id="story-content"></p>
+    <button id="save-btn">Save Story</button>
+  </div>
+
+  <script src="../../assets/script.js"></script>
+  <script>
+    const storyFolder = window.location.pathname.split('/')[2]; // story1, story2...
+    loadStory(storyFolder); // function from script.js
+
+    document.getElementById('save-btn').addEventListener('click', function() {
+      saveStory(storyFolder); // function from script.js
+      alert('Story saved!');
+    });
+  </script>
+</body>
+</html>
